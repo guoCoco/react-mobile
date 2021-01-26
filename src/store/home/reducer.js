@@ -1,13 +1,11 @@
-const defaultState = {
-    name: '',
-    age: 0,
-}
 
 
-const homeReducer = (state = defaultState, action = {}) => {
+const homeReducer = (state = 0, action = {}) => {
     switch(action.type) {
-        case 'ADD':
-            return {...state, name: action.value}
+        case 'INCREMENT':
+            return state + 1;
+        case 'INCREMENT_ASYNC':
+                return state;
         default:
             return state
     }

@@ -4,7 +4,7 @@ import homeReducer from './home/reducer';
 import aboutReducer from './home/reducer';
 import todoListReducer from './todoListRedux/reducer';
 
-import { helloSaga } from './saga';
+import rootSaga from './saga';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -17,6 +17,6 @@ const store = createStore(
     applyMiddleware(sagaMiddleware)
 );
 
-sagaMiddleware.run(helloSaga);
+sagaMiddleware.run(rootSaga);
 
 export default store;
